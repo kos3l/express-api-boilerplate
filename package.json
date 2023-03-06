@@ -4,13 +4,12 @@
   "description": "Boilerplate for my project REST Apis on the Web Development Top up. Uses: Express, Node, Mongodb, Mongoose, Typescript",
   "main": "server.ts",
   "scripts": {
-    "start": "nodemon server.ts",
+    "start-dev": "nodemon ./src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kos3l",
   "license": "ISC",
   "dependencies": {
-    "@types/express": "^4.17.17",
     "@types/mongoose": "^5.11.97",
     "@types/node": "^18.14.6",
     "bcrypt": "^5.1.0",
@@ -27,6 +26,8 @@
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
+    "@types/body-parser": "^1.19.2",
+    "@types/express": "^4.17.17",
     "@types/yamljs": "^0.2.31",
     "nodemon": "^2.0.21",
     "ts-node": "^10.9.1",
