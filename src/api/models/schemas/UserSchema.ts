@@ -1,7 +1,6 @@
 import { Schema, model, Model } from "mongoose";
 import { UserDocument, UserMethods } from "../documents/UserDocument";
 import { UserModel } from "../types/UserModel";
-
 const bcrypt = require("bcrypt");
 
 let userSchema = new Schema<UserDocument, UserModel, UserMethods>(
@@ -59,4 +58,4 @@ userSchema.method("comparePassword", async function (password: string) {
   return bcrypt.compare(password, this.password);
 });
 
-module.exports = model<UserDocument, UserModel>("user", userSchema);
+export const User = model<UserDocument, UserModel>("user", userSchema);
